@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مصر الذكية | Smart Egypt</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <div class="cyber-grid"></div>
+
+    <header class="header">
+        <div class="logo">
+            <span class="logo-icon pulse">𓋹</span>
+            <div>
+                <h1 class="glow-text">مصر الذكية</h1>
+                <p class="roman-sub" dir="ltr">Masr El Zhakya</p>
+            </div>
+        </div>
+        <nav class="nav">
+            <a href="#home">الرئيسية <span class="roman-nav" dir="ltr">(El Ra'eseya)</span></a>
+            <a href="#radar">الخريطة <span class="roman-nav" dir="ltr">(El Khareeta)</span></a>
+            <a href="#destinations">الأماكن <span class="roman-nav" dir="ltr">(El Amaken)</span></a>
+            <a href="#ai-guide">الروبوت <span class="roman-nav" dir="ltr">(El Robot)</span></a>
+            <a href="#family">عن مصر <span class="roman-nav" dir="ltr">(An Masr)</span></a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="scanline"></div>
+        <div class="hero-content">
+            <div class="badge pulse-badge">
+                مشروع اللغة العربية - الصف السادس
+                <span class="roman-badge" dir="ltr">Mashroo' El Logha El Arabia - El Saf El Sades</span>
+            </div>
+            <h2 class="glitch-text">السياحة في مصر</h2>
+            <p class="hero-subtitle" dir="ltr">El Seyaha Fe Masr</p>
+            <p class="hero-desc">
+                أهلاً بكم! هيا بنا نتعرف على أجمل أماكن في مصر.
+                <span class="roman-desc" dir="ltr">Ahlan bekom! Haya bena na'taraf 'ala ajmal amaken fe Masr.</span>
+            </p>
+            <a href="#destinations" class="btn-primary cyber-btn">ابدأ الرحلة <span dir="ltr">Abda' El Rehla</span></a>
+        </div>
+    </section>
+
+    <main class="container">
+
+        <section id="radar" class="section radar-section">
+            <div class="section-title">
+                <h2 class="glow-text">خريطة مصر 📡</h2>
+                <p class="roman-title" dir="ltr">Khareetat Masr</p>
+            </div>
+            <div class="radar-container">
+                <div class="radar">
+                    <div class="sweep"></div>
+                    <div class="ping p1" onclick="selectRadarPoint('أهرامات الجيزة')"><span>📍 الجيزة</span></div>
+                    <div class="ping p2" onclick="selectRadarPoint('شرم الشيخ')"><span>📍 شرم الشيخ</span></div>
+                    <div class="ping p3" onclick="selectRadarPoint('الأقصر')"><span>📍 الأقصر</span></div>
+                </div>
+                <div class="radar-info">
+                    <h4>اختر مكان: <span id="radarStatus" class="status-active">جاهز...</span></h4>
+                    <p class="roman-small" dir="ltr">Ekhtar makan: Gahez...</p>
+                    <p id="radarDetails">اضغط على أي نقطة حمراء.</p>
+                    <p id="radarDetailsRoman" class="roman-small" dir="ltr">Efghat 'ala ay nokta hamra.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="destinations" class="section">
+            <div class="section-title">
+                <h2>أماكن جميلة 🏛️</h2>
+                <p class="roman-title" dir="ltr">Amaken Gameela</p>
+            </div>
+            <div class="destinations-grid">
+                
+                <div class="card holographic">
+                    <img src="https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=600&q=80" alt="Pyramids of Giza">
+                    <div class="card-body">
+                        <h3>أهرامات الجيزة</h3>
+                        <p class="roman-card-title" dir="ltr">Ahramat El Giza</p>
+                        <p class="card-text">مكان مشهور جداً، نركب فيه الجمل ونرى الأهرامات.</p>
+                        <p class="roman-text" dir="ltr">Makan mashhoor geddan, narkab feeh el gamal wa nara el ahramat.</p>
+                        <div class="tag">حلو للعائلة 👨‍👩‍👧‍👦 <span class="roman-tag" dir="ltr">(Helw lel 'a'ela)</span></div>
+                        <button class="btn-secondary glow-btn" onclick="openModal('giza')">شاهد المزيد <span dir="ltr">Shahed El Mazeed</span></button>
+                    </div>
+                </div>
+
+                <div class="card holographic">
+                    <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=600&q=80" alt="Egyptian Museum">
+                    <div class="card-body">
+                        <h3>المتحف المصري</h3>
+                        <p class="roman-card-title" dir="ltr">El Mathaf El Masri</p>
+                        <p class="card-text">فيه تماثيل فرعونية قديمة وذهب الملك توت.</p>
+                        <p class="roman-text" dir="ltr">Feeh tamatheel fer'awneya qadeema wa zahab el malek Tut.</p>
+                        <div class="tag">حلو للعائلة 👨‍👩‍👧‍👦 <span class="roman-tag" dir="ltr">(Helw lel 'a'ela)</span></div>
+                        <button class="btn-secondary glow-btn" onclick="openModal('museum')">شاهد المزيد <span dir="ltr">Shahed El Mazeed</span></button>
+                    </div>
+                </div>
+
+                <div class="card holographic">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80" alt="Nile River">
+                    <div class="card-body">
+                        <h3>نهر النيل</h3>
+                        <p class="roman-card-title" dir="ltr">Nahr El Neel</p>
+                        <p class="card-text">نركب فيه القارب ونشاهد الغروب الجميل.</p>
+                        <p class="roman-text" dir="ltr">Narkab feeh el qareb wa noshahed el ghoroob el gameel.</p>
+                        <div class="tag">حلو للعائلة 👨‍👩‍👧‍👦 <span class="roman-tag" dir="ltr">(Helw lel 'a'ela)</span></div>
+                        <button class="btn-secondary glow-btn" onclick="openModal('nile')">شاهد المزيد <span dir="ltr">Shahed El Mazeed</span></button>
+                    </div>
+                </div>
+
+                <div class="card holographic">
+                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&q=80" alt="Sharm El-Sheikh">
+                    <div class="card-body">
+                        <h3>شرم الشيخ</h3>
+                        <p class="roman-card-title" dir="ltr">Sharm El Sheikh</p>
+                        <p class="card-text">بحر جميل ونظيف وفيه أسماك ملونة كثيرة.</p>
+                        <p class="roman-text" dir="ltr">Bahr gameel wa nazeef wa feeh asmak molawwana katheera.</p>
+                        <div class="tag">حلو للعائلة 👨‍👩‍👧‍👦 <span class="roman-tag" dir="ltr">(Helw lel 'a'ela)</span></div>
+                        <button class="btn-secondary glow-btn" onclick="openModal('sharm')">شاهد المزيد <span dir="ltr">Shahed El Mazeed</span></button>
+                    </div>
+                </div>
+
+                <div class="card holographic">
+                    <img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=600&q=80" alt="Luxor Temple">
+                    <div class="card-body">
+                        <h3>الأقصر</h3>
+                        <p class="roman-card-title" dir="ltr">El Uqsur</p>
+                        <p class="card-text">مدينة قديمة فيها معابد ونركب فيها المنطاد.</p>
+                        <p class="roman-text" dir="ltr">Madeena qadeema feeha ma'abed wa narkab feeha el mentad.</p>
+                        <div class="tag">حلو للعائلة 👨‍👩‍👧‍👦 <span class="roman-tag" dir="ltr">(Helw lel 'a'ela)</span></div>
+                        <button class="btn-secondary glow-btn" onclick="openModal('luxor')">شاهد المزيد <span dir="ltr">Shahed El Mazeed</span></button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="ai-guide" class="section ai-section">
+            <div class="section-title">
+                <h2>المرشد الذكي 🤖</h2>
+                <p class="roman-title" dir="ltr">El Morshed El Zhaki</p>
+            </div>
+            
+            <div class="chat-container">
+                <div class="bot-header">
+                    <div class="bot-avatar float">🤖</div>
+                    <div>
+                        <h3>الروبوت توت</h3>
+                        <p class="roman-small" dir="ltr">El Robot Tut</p>
+                    </div>
+                </div>
+
+                <div class="chat-window" id="chatWindow">
+                    <div class="message bot-message">
+                        مرحباً! اضغط على الأزرار في الأسفل لنتحدث!
+                        <div class="roman-small" dir="ltr">Marhaban! Efghat 'ala el azrar fel asfal lenatohaddath!</div>
+                    </div>
+                </div>
+
+                <div class="chat-controls">
+                    <button class="btn-chip" onclick="askAI('info')">معلومات الأماكن <span class="roman-chip" dir="ltr">(Ma'loomat)</span></button>
+                    <button class="btn-chip" onclick="askAI('family')">هل هو حلو للعائلة؟ <span class="roman-chip" dir="ltr">(Helw lel 'a'ela?)</span></button>
+                    <button class="btn-chip" onclick="askAI('activities')">ماذا نفعل هناك؟ <span class="roman-chip" dir="ltr">(Maza naf'al?)</span></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="family" class="section">
+            <div class="section-title">
+                <h2>لماذا تحب العائلات مصر؟ 👨‍👩‍👧‍👦</h2>
+                <p class="roman-title" dir="ltr">Lethaza tohib el 'a'elat Masr?</p>
+            </div>
+            <div class="family-list">
+                <div class="family-item pulse-box">
+                    <span class="bullet">1</span>
+                    <div>
+                        <h4>تاريخ قديم وسهل</h4>
+                        <p class="roman-small" dir="ltr">Tareekh qadeem wa sahl</p>
+                        <p>رؤية الأهرامات والمعابد والتعرف على الفراعنة.</p>
+                        <p class="roman-text" dir="ltr">Ro'yat el ahramat wa el ma'abed wa el ta'arof 'ala el fara'na.</p>
+                    </div>
+                </div>
+                <div class="family-item pulse-box">
+                    <span class="bullet">2</span>
+                    <div>
+                        <h4>متاحف جميلة</h4>
+                        <p class="roman-small" dir="ltr">Matahef gameela</p>
+                        <p>متاحف فيها صور وتماثيل حلوة ومفيدة للأطفال.</p>
+                        <p class="roman-text" dir="ltr">Matahef feeha soowar wa tamatheel helwa wa mofeeda lel atfal.</p>
+                    </div>
+                </div>
+                <div class="family-item pulse-box">
+                    <span class="bullet">3</span>
+                    <div>
+                        <h4>شواطئ ونهر النيل</h4>
+                        <p class="roman-small" dir="ltr">Shawate' wa Nahr El Neel</p>
+                        <p>اللعب على الرمل والسباحة وركوب القارب مع العائلة.</p>
+                        <p class="roman-text" dir="ltr">El la'eb 'ala el raml wa el sebaha wa rakob el qareb ma'a el 'a'ela.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="modal" id="infoModal">
+        <div class="modal-content glow-box">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle">اسم المكان</h3>
+            <p id="modalTitleRoman" class="roman-small" dir="ltr"></p>
+            <p id="modalDesc">تفاصيل المكان...</p>
+            <p id="modalDescRoman" class="roman-text" dir="ltr"></p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-details">
+            <div class="footer-box">
+                <span class="footer-label">إعداد الطالب:</span>
+                <span class="footer-value">Nabhya Pratap Singh</span>
+            </div>
+            <div class="footer-box">
+                <span class="footer-label">الصف:</span>
+                <span class="footer-value">السادس الابتدائي</span>
+                <span class="roman-small" dir="ltr">El Saf El Sades</span>
+            </div>
+            <div class="footer-box">
+                <span class="footer-label">المادة:</span>
+                <span class="footer-value">اللغة العربية</span>
+                <span class="roman-small" dir="ltr">El Logha El Arabia</span>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© مشروع مدرسة - مصر الذكية للسياحة والذكاء الاصطناعي</p>
+            <p>Designed by Nabhya Pratap Singh</p>
+        </div>
+    </footer>
+
+    <script src="script2.js"></script>
+</body>
+</html>
